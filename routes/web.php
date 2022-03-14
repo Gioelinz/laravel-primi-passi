@@ -15,9 +15,16 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    $data = [];
+    $data = [
+        'hello' => [
+            'laravel 7.30.1',
+            'php 8.0.1',
+            'powershell is bad',
+            'Gioele'
+        ]
+    ];
 
-    return view('home');
+    return view('home', $data);
 });
 
 Route::get('/hello', function () {
